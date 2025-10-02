@@ -1,12 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>MovieApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -14,7 +14,12 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
+    <strong>BEM VINDO</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-button [routerLink]="['/pagina-2']">Perfil</ion-button>
+    <ion-button [routerLink]="['/pagina-3']">Filmes</ion-button>
   </div>
+
+  
 </ion-content>
