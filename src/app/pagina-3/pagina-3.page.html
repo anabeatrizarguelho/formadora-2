@@ -1,18 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pagina-3</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Recomendação de Música</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pagina-3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="light">
 
+  <!-- Spinner enquanto carrega -->
+  <div class="spinner-container" *ngIf="carregando">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
 
-  <div class="button">
+  <!-- Card da música -->
+  <ion-card *ngIf="musica && !carregando">
+    <img [src]="musica.artworkUrl100.replace('100x100bb.jpg', '600x600bb.jpg')"alt="{{ musica.trackName }}" class="album-art">
+
+    <ion-card-header>
+      <ion-card-title>{{ musica.trackName }}</ion-card-title>
+      <ion-card-subtitle>{{ musica.artistName }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Álbum: {{ musica.collectionName }}
+      <div *ngIf="musica.previewUrl" class="audio-container">
+        <audio controls [src]="musica.previewUrl"></audio>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <ion-button expand="block" fill="outline" (click)="buscarMusica()">
+    Aceitar outra recomendação
+    </ion-button>
+
     <ion-button [routerLink]="['/home']">Voltar</ion-button>
   </div>
+
 </ion-content>
+
+
+
+
+

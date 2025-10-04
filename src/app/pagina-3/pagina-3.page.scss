@@ -1,0 +1,45 @@
+ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ion-card {
+  margin: 0 auto;
+}
+
+ion-card img {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.album-art {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 350px;
+}
+
+.audio-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.button {
+    text-align: center;
+    padding: 5% 0 0 0%;
+    margin-top: 1px;
+}

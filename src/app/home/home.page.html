@@ -1,24 +1,21 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>MovieApp</ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 
-<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding ion-text-center" color="light">
 
   <div id="container">
-    <strong>BEM VINDO</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-
-    <ion-button [routerLink]="['/pagina-2']">Perfil</ion-button>
-    <ion-button [routerLink]="['/pagina-3']">Filmes</ion-button>
+      <div class="welcome-text">
+        <h1>Olá, seja bem vindo(a)!</h1>
+        <p>Escolha uma opção para explorar o app:</p>
+      </div>
+      
+    <ion-button expand="block" [routerLink]="['/pagina-2']">Perfil do aluno</ion-button>
+    <ion-button expand="block" [routerLink]="['/pagina-3']">Recomendação de música</ion-button>
   </div>
 
   
